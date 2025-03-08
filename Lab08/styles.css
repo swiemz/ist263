@@ -1,0 +1,63 @@
+body {
+    background-color: #94d2bd;
+    color: black;
+}
+a {
+    color: #ee9b00;
+}
+a:hover {    
+    color: #ca6702;
+}
+h1, h2 {
+    color: #ca6702;
+}
+nav {
+    background-color: #bb3e03;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+nav a {
+    color: #9b2226;
+}
+nav a:hover {
+    color: #ae2012;
+}
+.copyright {
+    float: left;
+}
+.quote {
+    float: right;
+}   
+.contact-container {
+    display: flex;
+    background-color: gray;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+.contact-info, .contact-links {
+    flex: 1;
+    padding: 20px;    
+    background-color: white; 
+    border-radius: 5px;
+}
+.map-and-form {
+    display: flex;
+    background-color: gray;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 40px;  
+}
+.map, .survey {
+    flex: 1;
+    padding: 20px;    
+    background-color: white; 
+    border-radius: 5px;
+}
+.map {
+    order: 2
+}
+.survey {
+    order: 1
+}
