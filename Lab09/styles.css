@@ -1,0 +1,94 @@
+body {
+    background-color: white;
+    color: black;
+}
+a {
+    color: #ee9b00;
+}
+a:hover {    
+    color: #ca6702;
+}
+h1, h2 {
+    color: #ca6702;
+}
+nav a {
+    color: black;
+}
+nav a:hover {
+    color: gray;
+}
+.copyright {
+    float: left;
+}
+.quote {
+    float: right;
+}   
+.contact-container {
+    display: flex;
+    background-color: gray;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+.contact-info, .contact-links {
+    flex: 1;
+    padding: 20px;    
+    background-color: white; 
+    border-radius: 5px;
+}
+.map-and-form {
+    display: flex;
+    background-color: gray;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 40px;  
+}
+.map, .survey {
+    flex: 1;
+    padding: 20px;    
+    background-color: white; 
+    border-radius: 5px;
+}
+.map {
+    order: 2
+}
+.survey {
+    order: 1
+}
+
+span caption {
+text-align: center;
+}
+h1 { 
+text-align: center;
+}
+h2 {
+    font-size: 1.5em
+}
+.skill img {
+    width: 75px;
+} 
+.flexbox2 {
+display: flex
+}
+.skill {
+    flex: 2;
+    justify-content:space-between
+}
+aside {
+padding: 20px;
+display: flex;
+flex-direction: column;
+background-color: burlywood;
+border-radius: 10px;
+flex: 3;
+}
+body {
+    margin: 50px
+}
+nav {
+    background-color: burlywood;
+    padding: 10px;
+    margin-bottom: 30px;
+}
