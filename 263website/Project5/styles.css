@@ -29,7 +29,7 @@ h1 {
 
 h2 {
     text-align: center;
-    font-family: 'Mystery Quest';
+    font-family: 'Dancing Script', cursive;
     font-size: 2em;
     color: #333;
     margin-top: 40px;
@@ -37,7 +37,7 @@ h2 {
 }
 
 .child_images img,
-.teen_images img,
+.adol_images img,
 .current_images img {
     width: 200px;
     height: auto;
