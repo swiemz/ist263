@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My First JavaScript Button</title>
+    <title>OrangeNation</title>
 </head>
 <body>
-    <button onclick="showMessage()">Click for a message</button>
+    <div id="orangeText">Syracuse University</div>
 
     <script>
-        function showMessage() {
-            alert("My first JavaScript program!");
-        }
+      const text = document.getElementById('orangeText');
+      
+      text.addEventListener('click', function() {
+        text.style.color = 'orange';
+        text.innerHTML = 'Orange Nation';
+      });
     </script>
 </body>
 </html>

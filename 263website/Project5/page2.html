@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page 2</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function showModal(text) {
+            const modal = document.getElementById('imageModal');
+            const modalText = document.getElementById('modalText');
+            modalText.textContent = text;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        function showNextImage(currentImg) {
+            const images = document.querySelectorAll('.child_images img');
+            let currentIndex = Array.from(images).indexOf(currentImg);
+            let nextIndex = (currentIndex + 1) % images.length;
+            images[nextIndex].scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center' 
+            });
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
 </head>
 <body>
     <nav>
@@ -18,28 +48,49 @@
     <main>
         <h1>Childhood</h1>
         <h2>"the canvas on which the rest of our life is painted."</h2>
-        <p>My formative years, I remember many series of colorful memories, woven together by each member of my family—especially my older sister, who was at times my arch-nemesis and others my closest confidante. 
-            I look back on my childhood quite fondly, remembering the days spent barefoot on the beach, tending to our cheeky chickens, and curling up with my corgi, Lizzie. Now, Lizzie was a character in her own right—a snobbish little thing, to say the least. She'd only tolerate affection on her terms. If you dared to love her a little too much, she'd simply march away, her little butt swinging with disdain. We were little adventurers, sometimes a bit too daring for our own good. I, the classic middle child, had a firecracker spirit and a mind of my own—always in my own world, often caught in that delightful dance between rebellion and wonder. Though the years have passed, I'm certain my inner child has never strayed too far. I can still hear her giggles when I'm with the friends and family from that chapter of my life, as if time has a way of keeping us young. 
-            From my siblings, I learned to lead with kindness, listen with care, and—perhaps most importantly—how to be a little mischievous when the moment calls for it. From my mom and dad, I learned more than I ever realized—though at the time, I was blissfully oblivious. At this point in my life, they were both my opposition, the enemy that forced me to eat broccoli and get off of the computer. As a child, you tend to see your parents as these all-knowing creatures who exist solely to cater to your every need. Their lives before you? A mystery. Their world outside of you? Barely worth a second glance. It's as though, in your young eyes, they never existed before you—or perhaps, in a strange twist of childhood logic, you are the reason they exist at all. The thought of them having lives, dreams, or secrets beyond your little orbit is just... unfathomable. Little did I know that I would become a mosaic of both of them. And from Sophia Fawcett? Well, she taught me what it truly means to be a loyal and loving friend. We were girls together, playing in the woods with our barbies, doing circles around her driveway on our razor scooters, and dominating the political landscape of the kindergarten playground.  And then there were the sleepless sleepover nights, when time seemed to bend and stretch into the early hours, filled with whispered secrets and fits of giggles over our own silly inside jokes that no one else could ever quite understand. It was the kind of friendship that felt like magic—always easy, always full of joy. 
-            My childhood wasn't perfect, but it was wonderfully mine—full of the kind of magic that only youth can hold. I've grown, of course, but something of that little adventurer still lingers inside me, guiding the way I move through the world. The adventure, it seems, never really ends—it just evolves.
-        </p>
-        <div class="child_images">
-            <img src="child_images/image1.JPG" alt="Childhood Photo">
-            <img src="child_images/image2.JPG" alt="Childhood Photo">
-            <img src="child_images/image3.JPG" alt="Childhood Photo">
-            <img src="child_images/image4.JPG" alt="Childhood Photo">
-            <img src="child_images/image5.JPG" alt="Childhood Photo">
-            <img src="child_images/image6.JPG" alt="Childhood Photo">
-            <img src="child_images/image7.jpeg" alt="Childhood Photo">
-            <img src="child_images/image8.JPG" alt="Childhood Photo">
-            <img src="child_images/image9.jpeg" alt="Childhood Photo">
-            <img src="child_images/image10.jpeg" alt="Childhood Photo">
-            <img src="child_images/image11.png" alt="Childhood Photo">
-            <img src="child_images/image12.jpeg" alt="Childhood Photo">
-            <img src="child_images/image13.jpeg" alt="Childhood Photo">
-            <img src="child_images/image14.jpeg" alt="Childhood Photo">
-            <img src="child_images/image15.JPG" alt="Childhood Photo">
-        </div>
     </main>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+    <div class="child_images">
+        <img src="child_images/image10.jpeg" alt="Childhood Photo" 
+             onclick="showModal('My formative years, I remember many series of colorful memories, woven together by each member of my family —especially my older sister, who was at times my arch-nemesis'); showNextImage(this)">
+        <img src="child_images/image11.png" alt="Childhood Photo" 
+             onclick="showModal('and others my closest confidante.'); showNextImage(this)">
+        <img src="child_images/image3.JPG" alt="Childhood Photo" 
+             onclick="showModal('I look back on my childhood quite fondly, remembering the days spent barefoot on the beach...'); showNextImage(this)">
+        <img src="child_images/image7.jpeg" alt="Childhood Photo" 
+             onclick="showModal('...tending to our cheeky chickens...'); showNextImage(this)">
+        <img src="child_images/image15.JPG" alt="Childhood Photo" 
+             onclick="showModal('...and curling up with my corgi, Lizzie. Now, Lizzie was a character in her own right—a snobbish little thing, to say the least. She would only tolerate affection on her terms. If you dared to love her a little too much, she would simply march away, her little butt swinging with disdain'); showNextImage(this)">
+        <img src="child_images/image12.jpeg" alt="Childhood Photo" 
+             onclick="showModal('We were little adventurers, sometimes a bit too daring for our own good'); showNextImage(this)">
+        <img src="child_images/image1.JPG" alt="Childhood Photo" 
+             onclick="showModal('I, the classic middle child, had a firecracker spirit and a mind of my own—always in my own world, often caught in that delightful dance between rebellion and wonder. Though the years have passed, I am certain my inner child has never strayed too far. I can still hear her giggles when I am with the friends and family from that chapter of my life, as if time has a way of keeping us young'); showNextImage(this)">
+        <img src="child_images/image17.jpeg" alt="Childhood Photo" 
+             onclick="showModal('From my siblings, I learned to lead with kindness, listen with care…'); showNextImage(this)">
+        <img src="child_images/image16.JPG" alt="Childhood Photo" 
+             onclick="showModal('and—perhaps most importantly—how to be a little mischievous when the moment calls for it'); showNextImage(this)">
+        <img src="child_images/image4.JPG" alt="Childhood Photo" 
+             onclick="showModal('From my mom and dad, I learned more than I ever realized—though at the time, I was blissfully oblivious'); showNextImage(this)">
+        <img src="child_images/image13.jpeg" alt="Childhood Photo" 
+             onclick="showModal('At this point in my life, they were both my opposition, the enemy that forced me to eat broccoli and get off of the computer. As a child, you tend to see your parents as these all-knowing creatures who exist solely to cater to your every need. Their lives before you? A mystery. Their world outside of you? Barely worth a second glance'); showNextImage(this)">
+        <img src="child_images/image18.jpeg" alt="Childhood Photo" 
+             onclick="showModal('It is as though, in your young eyes, they never existed before you—or perhaps, in a strange twist of childhood logic, you are the reason they exist at all. The thought of them having lives, dreams, or secrets beyond your little orbit is just... unfathomable. Little did I know that I would become a mosaic of both of them.'); showNextImage(this)">
+        <img src="child_images/image5.JPG" alt="Childhood Photo" 
+             onclick="showModal('And from Sophia Fawcett? Well, she taught me what it truly means to be a loyal and loving friend. We were girls together, playing in the woods with our barbies, doing circles around her driveway on our razor scooters, and dominating the political landscape of the kindergarten playground. And then there were the sleepless sleepover nights, when time seemed to bend and stretch into the early hours, filled with whispered secrets and fits of giggles over our own silly inside jokes that no one else could ever quite understand. It was the kind of friendship that felt like magic—always easy, always full of joy'); showNextImage(this)">
+        <img src="child_images/image9.jpeg" alt="Childhood Photo" 
+             onclick="showModal('My childhood was not perfect, but it was wonderfully mine—full of the kind of magic that only youth can hold.'); showNextImage(this)">
+        <img src="child_images/image8.JPG" alt="Childhood Photo" 
+             onclick="showModal('I have grown, of course, but something of that little adventurer still lingers inside me, guiding the way I move through the world. The adventure, it seems, never really ends'); showNextImage(this)">
+        <img src="child_images/image19.JPG" alt="Childhood Photo" 
+             onclick="showModal('it just evolves.'); showNextImage(this)">
+    </div>
 </body>
 </html>

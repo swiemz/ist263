@@ -36,10 +36,81 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Photo gallery layout */
+.child_images,
+.adol_images,
+.current_images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .child_images img,
 .adol_images img,
 .current_images img {
     width: 200px;
+    height: 200px; /* Making images square */
+    object-fit: cover;
+    border-radius: 8px; /* Optional: adds rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds subtle shadow */
+    transition: transform 0.2s; /* Optional: adds hover effect */
+}
+
+/* Optional: hover effect */
+.child_images img:hover,
+.adol_images img:hover,
+.current_images img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.child_images img:last-child {
+    width: 100%;
     height: auto;
-    margin: 5px;
+    grid-column: 1 / -1; /* This makes the last image span all columns */
+    max-width: none; /* Removes any max-width restrictions */
+    margin: 20px 0; /* Adds some vertical spacing */
+}
+
+/* Keep existing hover effects but modify for last image */
+.child_images img:last-child:hover {
+    transform: none; /* Removes the hover scale effect for the full-width image */
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 70%;
+    max-width: 700px;
+    border-radius: 8px;
+    position: relative;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close:hover {
+    color: #000;
 }
