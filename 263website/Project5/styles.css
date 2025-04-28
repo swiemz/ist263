@@ -66,9 +66,6 @@ h2 {
     cursor: pointer;
 }
 
-.child_images img:last-child:hover {
-    transform: none;
-}
 .modal {
     display: none;
     position: fixed;
