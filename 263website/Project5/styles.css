@@ -119,3 +119,13 @@ h2 {
         align-items: center;
     } 
 }
+
+.cover-image img,  /* if your image is inside a div with class 'cover-image' */
+img#cover,        /* if your image has id 'cover' */
+img[src*="cover.jpg"] /* or target it directly by filename */ {
+    padding: 0 20px;  /* 20px padding on left and right */
+    max-width: calc(100% - 40px); /* adjust total width to account for padding */
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+}
