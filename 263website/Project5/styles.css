@@ -124,4 +124,7 @@ h2 {
 img[src*="cover.jpg"] {
     display: block;
     margin: 100px auto;
+    width: 70%;         
+    max-width: 800px;  
+    height: auto; 
 }
