@@ -66,14 +66,6 @@ h2 {
     cursor: pointer;
 }
 
-.child_images img:last-child {
-    width: 100%;
-    height: auto;
-    grid-column: 1 / -1; 
-    max-width: none; 
-    margin: 20px 0; 
-}
-
 .child_images img:last-child:hover {
     transform: none;
 }
