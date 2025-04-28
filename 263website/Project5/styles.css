@@ -122,7 +122,6 @@ h2 {
 
 
 img[src*="cover.jpg"] {
-    box-sizing: border-box;
     display: block;
-    margin: 20px auto;
+    margin: 100px auto;
 }
