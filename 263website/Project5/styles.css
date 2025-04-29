@@ -119,7 +119,7 @@ img[src*="cover.jpg"] {
 }
 
 .fairy-group {
-    grid-column: 1 / -1;  /* Make it span full width */
+    grid-column: 1 / -1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,16 +128,26 @@ img[src*="cover.jpg"] {
     width: 100%;
 }
 
-.fairy-group img {
+/* Style specifically for fairy images */
+.fairy-group img[src*="fairy"] {
     width: 200px;
     height: 200px;
     object-fit: contain;
-    flex: 0 0 auto; 
+    flex: 0 0 auto;
 }
 
-.fairy-group img:last-child {
-    width: 200px !important;
-    height: 200px !important;
-    max-width: 200px !important;
-    margin: 0 !important;
+/* Style for image19 to match other childhood photos */
+.fairy-group img:not([src*="fairy"]) {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+/* Hover effect for image19 only */
+.fairy-group img:not([src*="fairy"]):hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
