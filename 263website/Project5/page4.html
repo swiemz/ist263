@@ -6,6 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page 4</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function showModal(text) {
+            const modal = document.getElementById('imageModal');
+            const modalText = document.getElementById('modalText');
+            modalText.textContent = text;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        function showNextImage(currentImg) {
+            const images = document.querySelectorAll('.current_images img');
+            let currentIndex = Array.from(images).indexOf(currentImg);
+            let nextIndex = (currentIndex + 1) % images.length;
+            images[nextIndex].scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center' 
+            });
+        }
+
+     
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
 </head>
 <body>
     <nav>
@@ -16,50 +46,83 @@
             <li><a href="page4.html">Page 4</a></li>
         </ul>
     </nav>
-    <main>
+    <header>
         <h1>Present</h1>
         <h2>the only moment that truly belongs to us—where everything we have been and everything we hope to be collide</h2>
-        <p>Transitioning back to my old life after Spain felt like a breath of fresh air, yet I found myself missing it more as time went on. My senior year of high school was the first "normal" year I'd had in a while, and it became a whirlwind of unforgettable moments—football games, sports teams, prom, and finally walking across that stage at graduation. I had so much gratitude for these experiences, as if I was savoring every moment of the "high school dream" that I hadn't fully experienced until then.
-            The summer passed in the blink of an eye, and before I knew it, I was packing up my life once again—this time for Syracuse University. While I thought I was prepared for the change, the transition was still challenging. I made friends, but I felt a strong pull to spend time alone, grounding myself in this new environment and finding comfort in the routines I began to create. Even though I was surrounded by new people, I found it difficult to put myself out there and embrace all the new experiences. I didn't know what I wanted to study or who I wanted to become, and that uncertainty made everything feel like a big question mark.
-            But then, winter break arrived, and something about being home with friends, family, and, of course, my dog, made me feel like I had hit the reset button. It was over this break that I decided to join a sorority—something I never would have imagined for myself, but it felt like a great opportunity to meet new people and connect with older girls who could offer guidance. My roommate and I both joined Kappa Kappa Gamma, and while we stayed close, we also embraced our own paths within the sorority.
-            It was in the spring semester that things started to click. I changed my major, joined new organizations, and met my "big," Claudia, who helped shift my mindset about college. She reminded me that I wasn't competing with anyone—I was on my own path, with my own timeline. Everything would work out, as long as I kept moving forward.
-            By the time summer came around, I looked back on my first year with immense gratitude. It had been full of challenges, but it had also been full of growth. I had faced my fears and embraced discomfort, and in return, I had learned more about myself than I could have imagined. College wasn't just about academics—it was about connections, memories, and pushing yourself to step outside your comfort zone.
-            The summer offered a refreshing break as I traveled with my best friend, fulfilling a dream we had both shared for years. We'd saved for months, and finally, we were off on a trip that was all our own. We wandered through the streets of a beautiful city, soaking up the local culture and history, conversing with locals, and exploring off-the-beaten-path destinations. There is nothing more rewarding to me than learning directly from those who know a place best. The rest of the summer was spent working, hanging out with friends, and oddly missing school. As I prepared for my sophomore year, I made a new set of goals for myself. I've found that setting goals helps me stay balanced between my studies, my hobbies, and my social life. During the fall semester, I built new friendships, visited my cousins in New York City, and dove into coding projects in my classes at the iSchool. I also went through sorority recruitment again, but this time, I was on the other side, as a seasoned member. It felt like a full circle moment, and I couldn't wait to help guide the new members and share the lessons I had learned. Now, I have adopted two new babies into our sorority family, and I now get to serve as a role model for them both in the same way that Claudia was for me. 
-            Looking back on this journey, I can't help but feel proud of how far I've come. While I still have so much to learn and discover, I now know that growth happens in unexpected places, and I'm excited to continue embracing each new chapter, no matter how challenging it may seem. I may not have everything figured out, but I've learned that it's okay to not have all the answers—what matters is that I'm still learning, still growing, and still moving forward.
-        </p>
-        <div class="current_images">
-            <img src="current_images/c1.jpeg" alt="Current Photo">
-            <img src="current_images/c2.jpeg" alt="Current Photo">
-            <img src="current_images/c3.jpeg" alt="Current Photo">
-            <img src="current_images/c4.jpeg" alt="Current Photo">
-            <img src="current_images/c5.jpeg" alt="Current Photo">
-            <img src="current_images/c6.jpg" alt="Current Photo">
-            <img src="current_images/c7.jpeg" alt="Current Photo">
-            <img src="current_images/c8.jpeg" alt="Current Photo">
-            <img src="current_images/c9.jpeg" alt="Current Photo">
-            <img src="current_images/c10.JPG" alt="Current Photo">
-            <img src="current_images/c11.JPG" alt="Current Photo">
-            <img src="current_images/c12.jpeg" alt="Current Photo">
-            <img src="current_images/c13.jpeg" alt="Current Photo">
-            <img src="current_images/c14.jpg" alt="Current Photo">
-            <img src="current_images/c15.jpeg" alt="Current Photo">
-            <img src="current_images/c16.jpeg" alt="Current Photo">
-            <img src="current_images/c17.mov" alt="Current Photo">
-            <img src="current_images/c18.JPG" alt="Current Photo">
-            <img src="current_images/c19.jpeg" alt="Current Photo">
-            <img src="current_images/c20.JPG" alt="Current Photo">
-            <img src="current_images/c21.jpeg" alt="Current Photo">
-            <img src="current_images/c22.JPG" alt="Current Photo">
-            <img src="current_images/c23.JPG" alt="Current Photo">
-            <img src="current_images/c24.JPG" alt="Current Photo">
-            <img src="current_images/c25.jpeg" alt="Current Photo">
-            <img src="current_images/c26.JPG" alt="Current Photo">
-            <img src="current_images/c27.jpeg" alt="Current Photo">
-            <img src="current_images/c28.JPG" alt="Current Photo">
-            <img src="current_images/c29.JPG" alt="Current Photo">
-            <img src="current_images/c30.jpeg" alt="Current Photo">
-            <img src="current_images/c31.jpeg" alt="Current Photo">
-            <img src="current_images/c32.jpeg" alt="Current Photo">
+    </header>
+
+    <main>
+        <div id="imageModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p id="modalText"></p>
+            </div>
+             <div class="current_images">
+            <img src="current_images/c1.jpeg" alt="Current Photo"
+                onclick="showModal('Transitioning back to my old life after Spain felt like a breath of fresh air, yet I found myself missing it more as time went on.'); showNextImage(this)">
+            <img src="current_images/c6.jpg" alt="Current Photo"
+                onclick="showModal('My senior year of high school was the first normal year I had in a while, and it became a whirlwind of unforgettable moments—football games...'); showNextImage(this)">
+            <img src="current_images/c4.jpeg" alt="Current Photo"
+                onclick="showModal('Sports teams...'); showNextImage(this)">
+            <img src="current_images/c3.jpeg" alt="Current Photo"
+                onclick="showModal('Prom...'); showNextImage(this)">
+            <img src="current_images/c2.jpeg" alt="Current Photo" 
+                onclick="showModal('And finally walking across the stage at graduation.'); showNextImage(this)">     
+            <img src="current_images/c5.jpeg" alt="Current Photo"
+                onclick="showModal('I had so much gratitude for these experiences, as if I was savoring every moment of the “high school dream” that I hadn’t fully experienced until then.'); showNextImage(this)">
+            <img src="current_images/c7.jpeg" alt="Current Photo"
+                onclick="showModal('The summer passed in the blink of an eye, and before I knew it, I was packing up my life once again—this time for Syracuse University.'); showNextImage(this)">
+            <img src="current_images/c8.jpeg" alt="Current Photo"
+                onclick="showModal('While I thought I was prepared for the change, the transition was still challenging.'); showNextImage(this)">
+            <img src="current_images/c11.JPG" alt="Current Photo"
+                onclick="showModal('I made friends, but I felt a strong pull to spend time alone, grounding myself in this new environment and finding comfort in the routines I began to create.'); showNextImage(this)">
+            <img src="current_images/c10.JPG" alt="Current Photo"
+                onclick="showModal('Even though I was surrounded by new people, I found it difficult to put myself out there and embrace all the new experiences.'); showNextImage(this)">
+            <img src="current_images/c9.jpeg" alt="Current Photo"
+                onclick="showModal('I didn’t know what I wanted to study or who I wanted to become, and that uncertainty made everything feel like a big question mark.'); showNextImage(this)">
+            <img src="current_images/c13.jpeg" alt="Current Photo" 
+                onclick="showModal('But then, winter break arrived, and something about being home with friends, family...'); showNextImage(this)">
+            <img src="current_images/c12.jpeg" alt="Current Photo"
+                onclick="showModal('and, of course, my dog, made me feel like I had hit the reset button.'); showNextImage(this)">
+            <img src="current_images/c14.jpg" alt="Current Photo"
+                onclick="showModal('It was over this break that I decided to join a sorority—something I never would have imagined for myself, but it felt like a great opportunity to meet new people and connect with older girls who could offer guidance. My roommate and I both joined Kappa Kappa Gamma, and while we stayed close, we also embraced our own paths within the sorority.'); showNextImage(this)">
+            <img src="current_images/c16.jpeg" alt="Current Photo"
+                onclick="showModal('It was in the spring semester that things started to click. I changed my major, joined new organizations, and met my big, Claudia, who helped shift my mindset about college. She reminded me that I wasn’t competing with anyone—I was on my own path, with my own timeline. Everything would work out, as long as I kept moving forward.'); showNextImage(this)">
+            <img src="current_images/c15.jpeg" alt="Current Photo" 
+                onclick="showModal('The rest of the year was filled with excitement. My best friend Sedi from Spain visited...'); showNextImage(this)">  
+            <img src="current_images/c17.mov" alt="Current Photo"
+                onclick="showModal('I went skiing with my dad over Spring Break...'); showNextImage(this)">
+            <img src="current_images/c19.jpeg" alt="Current Photo"
+                onclick="showModal('and I was initiated into KKG!'); showNextImage(this)">
+            <img src="current_images/c18.JPG" alt="Current Photo"
+                onclick="showModal('By the time summer came around, I looked back on my first year with immense gratitude. It had been full of challenges, but it had also been full of growth.'); showNextImage(this)">
+            <img src="current_images/c20.JPG" alt="Current Photo"
+                onclick="showModal(' I had faced my fears and embraced discomfort, and in return, I had learned more about myself than I could have imagined. College wasn’t just about academics—it was about connections, memories, and pushing yourself to step outside your comfort zone.'); showNextImage(this)">
+            <img src="current_images/c24.JPG" alt="Current Photo"
+                onclick="showModal('The summer offered a refreshing break as I traveled with my best friend, fulfilling a dream we had both shared for years. We’d saved for months, and finally, we were off on a trip that was all our own.'); showNextImage(this)">
+            <img src="current_images/c23.JPG" alt="Current Photo"
+                onclick="showModal('We wandered through the streets of a beautiful city, soaking up the local culture and history, conversing with locals, and exploring off-the-beaten-path destinations.'); showNextImage(this)">
+            <img src="current_images/c22.JPG" alt="Current Photo"
+                onclick="showModal('There is nothing more rewarding to me than learning directly from those who know a place best.'); showNextImage(this)">
+            <img src="current_images/c25.jpeg" alt="Current Photo"
+                onclick="showModal('The rest of the summer was spent working, hanging out with friends, and oddly missing school.'); showNextImage(this)">
+            <img src="current_images/c21.jpeg" alt="Current Photo" 
+                onclick="showModal('As I prepared for my sophomore year, I made a new set of goals for myself. I’ve found that setting goals helps me stay balanced between my studies, my hobbies, and my social life.'); showNextImage(this)">   
+            <img src="current_images/c26.JPG" alt="Current Photo"
+                onclick="showModal('During the fall semester, I built new friendships...'); showNextImage(this)">
+            <img src="current_images/c29.JPG" alt="Current Photo"
+                onclick="showModal('visited my cousins in New York City...'); showNextImage(this)">
+            <img src="current_images/c30.jpeg" alt="Current Photo"
+                onclick="showModal('and dove into coding projects in my classes at the iSchool.'); showNextImage(this)">
+            <img src="current_images/c31.jpeg" alt="Current Photo"
+                onclick="showModal('I also went through sorority recruitment again, but this time, I was on the other side, as a seasoned member. It felt like a full circle moment, and I couldn’t wait to help guide the new members and share the lessons I had learned.'); showNextImage(this)">
+            <img src="current_images/c32.jpeg" alt="Current Photo"
+                onclick="showModal('Now, I have adopted two new babies into our sorority family, and I now get to serve as a role model for them both in the same way that Claudia was for me.'); showNextImage(this)">
+            <img src="current_images/c28.JPG" alt="Current Photo"
+                onclick="showModal('Looking back on this journey, I can’t help but feel proud of how far I’ve come. While I still have so much to learn and discover, I now know that growth happens in unexpected places, and I’m excited to continue embracing each new chapter, no matter how challenging it may seem.'); showNextImage(this)">
+            <img src="current_images/c27.jpeg" alt="Current Photo"
+                onclick="showModal('I may not have everything figured out, but I’ve learned that it’s okay to not have all the answers—what matters is that I’m still learning, still growing, and still moving forward.'); showNextImage(this)">
+            
         </div>
     </main>
 </body>
