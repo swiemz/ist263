@@ -128,7 +128,6 @@ img[src*="cover.jpg"] {
     width: 100%;
 }
 
-/* Style specifically for fairy images */
 .fairy-group img[src*="fairy"] {
     width: 200px;
     height: 200px;
@@ -136,7 +135,7 @@ img[src*="cover.jpg"] {
     flex: 0 0 auto;
 }
 
-/* Style for image19 to match other childhood photos */
+
 .fairy-group img:not([src*="fairy"]) {
     width: 200px;
     height: 200px;
@@ -146,35 +145,18 @@ img[src*="cover.jpg"] {
     transition: transform 0.2s;
 }
 
-/* Hover effect for image19 only */
 .fairy-group img:not([src*="fairy"]):hover {
     transform: scale(1.05);
     cursor: pointer;
 }
 
-/* Add this to your existing styles */
+
 .current_images img[src*="c17.mov"] {
-    width: 400px;  /* Twice the width */
-    height: 400px; /* Twice the height */
-    grid-column: span 2; /* Make it span 2 columns */
-    grid-row: span 2;    /* Make it span 2 rows */
+    width: 400px;  
+    height: 400px; 
+    grid-column: span 2;
+    grid-row: span 2;   
     justify-self: center;
 }
 
-.current_images video.movie-module {
-    width: 400px;  /* Twice the width */
-    height: 400px; /* Twice the height */
-    grid-column: span 2; /* Make it span 2 columns */
-    grid-row: span 2;    /* Make it span 2 rows */
-    justify-self: center;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-}
-
-.current_images video.movie-module:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-}
 
