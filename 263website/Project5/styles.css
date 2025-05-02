@@ -151,3 +151,26 @@ img[src*="cover.jpg"] {
     transform: scale(1.05);
     cursor: pointer;
 }
+
+.current_images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.current_images img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.current_images img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
