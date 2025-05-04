@@ -205,7 +205,8 @@ img[src*="cover.jpg"],
 
     .child_images,
     .adol_images,
-    .current_images {
+    .current_images,
+    .fairy-group img:not([src*="fairy"]){
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
         padding: 10px;
@@ -214,7 +215,8 @@ img[src*="cover.jpg"],
     .child_images img,
     .adol_images img,
     .current_images img,
-    .current_images video {
+    .current_images video,
+    .fairy-group img:not([src*="fairy"]) {
         width: 100%;
         height: 150px;
     }
@@ -230,13 +232,4 @@ img[src*="cover.jpg"],
     .fairy-group img[src*="fairy"] {
         display: none;
     }
-
-    .fairy-group img:not([src*="fairy"]) {
-        width: 100%;
-        height: 150px;
-        grid-column: auto;
-        grid-row: auto;
-        margin: 0;
-    }
 }
-
