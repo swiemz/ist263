@@ -201,7 +201,10 @@ img[src*="cover.jpg"],
         padding: 10px;
         border-radius: 5px; 
     }
-
+    .fairy-group img[src*="fairy"] {
+        display: none;
+    }
+    
     .child_images,
     .adol_images,
     .current_images,
@@ -225,10 +228,5 @@ img[src*="cover.jpg"],
         height: 300px;
         grid-column: span 2;
         grid-row: span 1;
-    }
-
-
-    .fairy-group img[src*="fairy"] {
-        display: none;
     }
 }
