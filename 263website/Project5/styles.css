@@ -199,7 +199,6 @@ img[src*="cover.jpg"],
     nav a {
         display: block;
         padding: 10px;
-        background-color: pink; 
         border-radius: 5px; 
     }
 
