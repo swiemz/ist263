@@ -1,3 +1,7 @@
+nav {
+    background-color: #D9D0DE;
+    padding: 10px 0;
+}
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -22,7 +26,7 @@ h1 {
     text-align: center;
     font-family: 'Dancing Script', cursive;
     font-size: 3em;
-    color: #333;
+    color: #A04668;
     margin-top: 40px;
     margin-bottom: 20px;
 } 
@@ -31,12 +35,12 @@ h2 {
     text-align: center;
     font-family: 'Dancing Script', cursive;
     font-size: 2em;
-    color: #333;
+    color: #AB4967;
     margin-top: 40px;
     margin-bottom: 20px;
 }
 
-/* Photo gallery layout */
+
 .child_images,
 .adol_images,
 .current_images {
