@@ -161,10 +161,10 @@ img[src*="cover.jpg"],
     justify-self: center;
 }
 .current_images video.movie-module {
-    width: 400px;  /* Twice the width */
-    height: 400px; /* Twice the height */
-    grid-column: span 2; /* Make it span 2 columns */
-    grid-row: span 2;    /* Make it span 2 rows */
+    width: 400px;  
+    height: 400px;
+    grid-column: span 2; 
+    grid-row: span 2;   
     justify-self: center;
     object-fit: cover;
     border-radius: 8px;
@@ -175,5 +175,42 @@ img[src*="cover.jpg"],
 .current_images video.movie-module:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+/* Media query for screens less than 600px */
+@media screen and (max-width: 600px) {
+    .child_images,
+    .adol_images,
+    .current_images {
+        grid-template-columns: repeat(2, 1fr); /* Two images per row */
+        gap: 10px; /* Smaller gap for mobile */
+        padding: 10px; /* Smaller padding for mobile */
+    }
+
+    .child_images img,
+    .adol_images img,
+    .current_images img,
+    .current_images video {
+        width: 100%; /* Make images fill their grid cell */
+        height: 150px; /* Smaller height for mobile */
+    }
+
+    /* Adjust the movie module size for mobile */
+    .current_images video.movie-module {
+        width: 100%;
+        height: 300px;
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    /* Adjust fairy group for mobile */
+    .fairy-group {
+        gap: 10px;
+    }
+
+    .fairy-group img {
+        width: 30%; /* Make each image take up a third of the space */
+        height: auto;
+    }
 }
 
